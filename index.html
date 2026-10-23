@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV | Muhammad Aditia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <div>
+      <p class="kicker">CURRICULUM VITAE</p>
+      <h1>Muhammad Aditia</h1>
+      <p class="subtitle">Pelajar · Minat Teknologi dan Olahraga</p>
+      <p class="intro">Saya adalah pelajar yang senang mencoba hal baru, mampu beradaptasi dengan lingkungan baru, dan memanfaatkan teknologi AI sebagai alat bantu belajar serta menyelesaikan tugas sekolah.</p>
+    </div>
+    <div class="photo-wrap">
+      <div class="photo" id="photoFrame">
+        <img id="photoPreview" alt="Foto formal Muhammad Aditia" src="foto-muhammad-aditia.png" style="display:block">
+      </div>
+      <div class="photo-tools"><label for="photoInput">＋ Pilih / Ganti Foto</label><input id="photoInput" type="file" accept="image/*"></div>
+    </div>
+  </header>
+  <div class="content">
+    <div>
+      <section class="section">
+        <h2 class="section-title"><span class="num">01</span> Tentang Saya</h2>
+        <p>Saya merupakan pelajar berusia 17 tahun yang tertarik pada teknologi dan olahraga. Saya senang bermain game, berolahraga, serta belajar menggunakan teknologi AI untuk membantu mengerjakan tugas sekolah dengan lebih efektif.</p>
+      </section>
+      <section class="section">
+        <h2 class="section-title"><span class="num">02</span> Pengalaman & Ekstrakurikuler</h2>
+        <div class="item"><h3>Futsal</h3><div class="small">Kegiatan Ekstrakurikuler / Olahraga</div><p>Mengikuti kegiatan futsal untuk melatih kerja sama tim, kedisiplinan, komunikasi, dan semangat sportif.</p></div>
+      </section>
+      <section class="section">
+        <h2 class="section-title"><span class="num">03</span> Keahlian</h2>
+        <div class="pills"><span class="pill">Adaptasi Lingkungan</span><span class="pill">Teknologi AI</span><span class="pill">Membantu Tugas Sekolah</span><span class="pill">Kerja Sama Tim</span><span class="pill">Sportivitas</span></div>
+      </section>
+    </div>
+    <aside>
+      <section class="section">
+        <h2 class="section-title"><span class="num">04</span> Informasi Pribadi</h2>
+        <div class="facts">
+          <div class="fact"><div class="fact-label">Nama Lengkap</div><div class="fact-value">Muhammad Aditia</div></div>
+          <div class="fact"><div class="fact-label">Umur</div><div class="fact-value">17 tahun</div></div>
+          <div class="fact"><div class="fact-label">Tanggal Lahir</div><div class="fact-value">24 April 2009</div></div>
+          <div class="fact"><div class="fact-label">Alamat</div><div class="fact-value">Kp. Pasigaran RT 05/RW 09, Desa Citeureup, Kecamatan Dayeuhkolot</div></div>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section-title"><span class="num">05</span> Hobi</h2>
+        <div class="pills"><span class="pill">🎮 Bermain Game</span><span class="pill">⚽ Berolahraga</span></div>
+      </section>
+      <div class="note"><strong>Tujuan:</strong> Terus mengembangkan kemampuan diri, belajar hal baru, dan menggunakan teknologi secara positif untuk mendukung pendidikan.</div>
+    </aside>
+  </div>
+  <footer class="footer"><span>MUHAMMAD ADITIA · CV PELAJAR</span><span>INFORMATIKA · 2026</span></footer>
+</main>
+<script>
+const input=document.getElementById('photoInput');
+const preview=document.getElementById('photoPreview');
+const placeholder=document.getElementById('photoPlaceholder');
+input.addEventListener('change',function(){const file=this.files&&this.files[0];if(!file)return;if(!file.type.startsWith('image/')){alert('Pilih file foto berupa gambar.');return;}const reader=new FileReader();reader.onload=function(e){preview.src=e.target.result;preview.style.display='block';placeholder.style.display='none';};reader.readAsDataURL(file);});
+</script>
+</body>
+</html>
